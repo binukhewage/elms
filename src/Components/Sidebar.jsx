@@ -100,7 +100,9 @@ const Sidebar = ({ onToggle }) => {
         
         <nav className="h-full flex flex-col">
           {/* Header with logo and collapse button */}
-          <div className={`p-4 flex ${collapsed && !isMobile ? 'flex-col items-center gap-4' : 'justify-between items-center border-b border-gray-700'}`}>
+          <Link 
+          to='/'
+          className={`p-4 flex ${collapsed && !isMobile ? 'flex-col items-center gap-4' : 'justify-between items-center border-b border-gray-700'}`}>
             {collapsed && !isMobile ? (
               <div className="flex flex-col items-center">
                 <img 
@@ -121,7 +123,7 @@ const Sidebar = ({ onToggle }) => {
                 {collapsed ? <ChevronLast size={18} /> : <ChevronFirst size={18} />}
               </button>
             )}
-          </div>
+          </Link>
 
           {/* Main Menu Items */}
           <div className="flex-1 px-3 py-6 space-y-2">
